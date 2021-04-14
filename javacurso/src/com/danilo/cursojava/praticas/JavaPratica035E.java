@@ -5,25 +5,26 @@ import java.util.Scanner;
 public class JavaPratica035E {
 
 	public static void main(String[] args) {
-/* Utilize a estrutura do / while pelo menos uma vez para elaborar uma Progressão Aritmética de valores inteiros, 
-positivos iniciada com o valor 10 e razão 6, na qual o valor limite da sequencia será informado pelo usuário (executor),
-obedecendo aos seguintes critérios:
-(1) O valor limite deve ser informado pelo usuário em um intervalo fechado de 50 e 100.
-(2) Se o usuário informar qualquer valor fora desse intervalo, o algoritmo deverá permanecer
-solicitando o valor, até que seja informado dentro do intervalo. A sequencia só será construída quando
-o usuário informar o valor dentro do intervalo.
+/* Utilize a estrutura do / while pelo menos uma vez para elaborar uma ProgressÃ£o AritmÃ©tica de valores inteiros, 
+positivos iniciada com o valor 10 e razÃ£o 6, na qual o valor limite da sequencia serÃ¡ informado pelo usuÃ¡rio (executor),
+obedecendo aos seguintes critÃ©rios:
+(1) O valor limite deve ser informado pelo usuÃ¡rio em um intervalo fechado de 50 e 100.
+(2) Se o usuÃ¡rio informar qualquer valor fora desse intervalo, o algoritmo deverÃ¡ permanecer
+solicitando o valor, atÃ© que seja informado dentro do intervalo. A sequencia sÃ³ serÃ¡ construÃ­da quando
+o usuÃ¡rio informar o valor dentro do intervalo.
 
 Com base no texto acima:
 a) Apresente a sequencia.
 b) Calcule a quantidade de elementos da sequencia.
-c) Calcule a média aritmética do primeiro e último valor da sequencia.
-d) Identifique a quantidade de números pares existentes na sequencia.
-e) Identifique a quantidade de números ímpares existentes na sequencia
-f) Identifique a quantidade de números ímpares divisíveis por 3 existentes na sequencia.
+c) Calcule a mÃ©dia aritmÃ©tica do primeiro e Ãºltimo valor da sequencia.
+d) Identifique a quantidade de nÃºmeros pares existentes na sequencia.
+e) Identifique a quantidade de nÃºmeros Ã­mpares existentes na sequencia
+f) Identifique a quantidade de nÃºmeros Ã­mpares divisÃ­veis por 3 existentes na sequencia.
 g) Calcule a soma de todos os elementos da sequencia.
-h) Calcule a média ponderada do 4º e do 10º numero da sequencia, considerando os pesos 4 e 6 respectivamente,
-quando for possível. Caso a sequencia não apresente um desses elementos, o mesmo deverá ser informado.
+h) Calcule a mÃ©dia ponderada do 4Âº e do 10Âº numero da sequencia, considerando os pesos 4 e 6 respectivamente,
+quando for possÃ­vel. Caso a sequencia nÃ£o apresente um desses elementos, o mesmo deverÃ¡ ser informado.
 */
+// WARNING: ESSE CÃ“DIGO TEM UM ERRO. NÃƒO FUNCIONA PARA ENTRADAS MAIORES QUE 65. VER CÃ“DIGO CORRETO NA CLASSE JavaPratica035. 
 
 		int MAX = 100;
 		int MIN = 50;
@@ -44,7 +45,7 @@ quando for possível. Caso a sequencia não apresente um desses elementos, o mesmo
 		Scanner teclado = new Scanner(System.in);
 		
 		do {
-			System.out.println("Qual o valor limite da sequência?");
+			System.out.println("Qual o valor limite da sequÃªncia?");
 			limite = teclado.nextInt();
 			if (limite < MIN || limite > MAX) {
 				System.out.println("O valor limite deve estar entre 50 e 100, tente novamente.");
@@ -71,65 +72,65 @@ quando for possível. Caso a sequencia não apresente um desses elementos, o mesmo
 			lista[i] = n;
 		}
 		// a) Apresente a sequencia.
-		System.out.print("A sequência é: \n");
+		System.out.print("A sequÃªncia Ã©: \n");
 		for (int i=0; i < lista.length; i++) {
 			System.out.printf("%.0f ", lista[i]);
 		}
 		System.out.println();
 		System.out.print("-----------------------------------------------\n");
 		// b) Calcule a quantidade de elementos da sequencia.
-		System.out.printf("A sequência possui %d elementos. \n", lista.length);
+		System.out.printf("A sequÃªncia possui %d elementos. \n", lista.length);
 		
 		System.out.print("-----------------------------------------------\n");
-		// c) Calcule a média aritmética do primeiro e último valor da sequência.
+		// c) Calcule a mÃ©dia aritmÃ©tica do primeiro e Ãºltimo valor da sequÃªncia.
 		media = (lista[0]+lista[countsize-1])/2;
-		System.out.printf("O primeiro termo da sequência é %.0f, o último é %.0f e a média aritmética deles é %.2f. \n", lista[0], lista[countsize-1], media);
+		System.out.printf("O primeiro termo da sequÃªncia Ã© %.0f, o Ãºltimo Ã© %.0f e a mÃ©dia aritmÃ©tica deles Ã© %.2f. \n", lista[0], lista[countsize-1], media);
 		
 		System.out.print("-----------------------------------------------\n");
-		//d) Identifique a quantidade de números pares existentes na sequência.
+		//d) Identifique a quantidade de nÃºmeros pares existentes na sequÃªncia.
 		for (int i=0; i < lista.length; i++) {
 			if (lista[i]%2 == 0) {
 				countpares++;
 			}
 		}
-		System.out.printf("A quantidade de números pares é %d. \n", countpares);
+		System.out.printf("A quantidade de nÃºmeros pares Ã© %d. \n", countpares);
 		
 		System.out.print("-----------------------------------------------\n");
-		// e) Identifique a quantidade de números ímpares existentes na sequencia.
+		// e) Identifique a quantidade de nÃºmeros Ã­mpares existentes na sequencia.
 		for (int i=0; i < lista.length; i++) {
 			if (lista[i]%2 != 0) {
 				countimpares++;
 			}
 		}
-		System.out.printf("A quantidade de números ímpares é %d. \n", countimpares);
+		System.out.printf("A quantidade de nÃºmeros Ã­mpares Ã© %d. \n", countimpares);
 		
 		System.out.print("-----------------------------------------------\n");
-		//f) Identifique a quantidade de números ímpares divisíveis por 3 existentes na sequencia.
+		//f) Identifique a quantidade de nÃºmeros Ã­mpares divisÃ­veis por 3 existentes na sequencia.
 		for (int i=0; i < lista.length; i++) {
 			if (lista[i]%3 == 0) {
 				countimpares3++;
 			}
 		}
-		System.out.printf("A quantidade de número ímpares divisíveis por 3 é %d. \n", countimpares3);
+		System.out.printf("A quantidade de nÃºmero Ã­mpares divisÃ­veis por 3 Ã© %d. \n", countimpares3);
 		
 		System.out.print("-----------------------------------------------\n");
-		//g) Calcule a soma de todos os elementos da sequência.
+		//g) Calcule a soma de todos os elementos da sequÃªncia.
 		for (int i=0; i < lista.length; i++) {
 			soma = soma + lista[i];
 		}
-		System.out.printf("A soma de todos os termos da sequência é %.0f. \n", soma);
+		System.out.printf("A soma de todos os termos da sequÃªncia Ã© %.0f. \n", soma);
 		
 		System.out.print("-----------------------------------------------\n");
-		/*h) Calcule a média ponderada do 4º e do 10º numero da sequencia, considerando os pesos 4 e 6 respectivamente,
-		quando for possível. Caso a sequencia não apresente um desses elementos, o mesmo deverá ser informado.*/
+		/*h) Calcule a mÃ©dia ponderada do 4Âº e do 10Âº numero da sequencia, considerando os pesos 4 e 6 respectivamente,
+		quando for possÃ­vel. Caso a sequencia nÃ£o apresente um desses elementos, o mesmo deverÃ¡ ser informado.*/
 		if (lista.length >=4 && lista.length >= 10) {
 			
 			mediaponderada = (lista[3]*PESON4+lista[9]*PESON6)/(PESON4+PESON6);
-			System.out.printf("A média ponderada entre o 4º e 10º elementos da sequência,"
-					+ " considerando os pesos %d e %d respectivamente, é %.2f. \n", PESON4, PESON6, mediaponderada);
+			System.out.printf("A mÃ©dia ponderada entre o 4Âº e 10Âº elementos da sequÃªncia,"
+					+ " considerando os pesos %d e %d respectivamente, Ã© %.2f. \n", PESON4, PESON6, mediaponderada);
 			
 		}else{
-			System.out.print("A sequência não apresenta elementos na 4º ou na 10º posição.");
+			System.out.print("A sequÃªncia nÃ£o apresenta elementos na 4Âº ou na 10Âº posiÃ§Ã£o.");
 		}
 	}
 }
