@@ -6,6 +6,8 @@ public class JavaPratica016 {
 
 	public static void main(String[] args) {
 		
+		//AlteraÃ§Ã£o.
+		
 		Scanner teclado = new Scanner(System.in);
 		
 		System.out.println("Qual seu nome?");
@@ -20,7 +22,7 @@ public class JavaPratica016 {
 		System.out.println("Digite o terceiro valor:");
 		int n3 = teclado.nextInt();
 		
-		System.out.printf("Seu nome é %s e o resultado da operação é %d", nome, (n1+n2)*n3);
+		System.out.printf("Seu nome ï¿½ %s e o resultado da operaï¿½ï¿½o ï¿½ %d", nome, (n1+n2)*n3);
 		
 		
 
